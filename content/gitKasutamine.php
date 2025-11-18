@@ -1,10 +1,15 @@
 <?php
 echo "<h2>Git Käsud";
-echo "</h2>";
+echo "<ol>";
+echo "<li>Repo loomine";
+echo "<pre>git init</pre>";
+echo "</li>";
 ?>
 <li>Konfigureerimine
     <pre>
         git config --global user.name "nikitosgoldboss@gmail.com"
+        git config --global user.email "Nikita Gontsarov"
+        git config --global --list
     </pre>
 </li>
 <li>
@@ -16,7 +21,12 @@ echo "</h2>";
 </li>
 <li>
     jälgimise lisamine ja commit'i tegemine
-    git
+    <pre>
+        git status
+        git add .
+        git commit -a -m "commit'i tegemine
+    </pre>
+
 </li>
 <?php
 echo "<li>GITHUB projeektiga sidumine";

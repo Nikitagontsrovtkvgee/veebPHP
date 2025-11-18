@@ -5,16 +5,27 @@ header {
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: #f1f1f1;
     text-align: center;
     padding: 8px;
+    z-index: 1000;
 }
 ul {
+    border: 1px solid #555555;
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 200px;
     background-color: #f1f1f1;
+}
+
+li {
+    text-align: center;
+    border-bottom: 1px solid #555555;
 }
 
 li a {
@@ -28,4 +39,37 @@ li a {
 li a:hover {
     background-color: #555555;
     color: white;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+div.flex-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 25%;
+}
+
+div.flex-container > div {
+    margin: 10px;
+    flex: 1;
+    border: solid 1pt gray;
+    border-radius: 10px;
+    padding: 10px;
+}
+@media screen and (max-width: 600px) {
+    div.flex-container, nav {
+        flex-direction: column;
+    }
+}
+
+
+img {
+    width: 200px;
 }
