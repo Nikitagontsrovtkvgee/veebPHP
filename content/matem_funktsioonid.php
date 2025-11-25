@@ -72,9 +72,20 @@ $perenimi = "Gontsarov";
 echo $nimi;
 echo "<br>";
 $format = 'Tere, %s %s, arv x: %d';
-printf($format, $perenimi, $nimi);
+printf($format, $perenimi, $nimi, $x);
 echo "<br>";
 
 echo "<h3>Mõeldud arv</h3>";
 $arv3 = 42;
-$arv3
+
+echo "Mõeldud arv * 2: " . ($arv3 * 2) . "<br>";
+echo "Seda arv /4: " . (84 / 4) . "<br>";
+echo "Sellest arv -7: " . (21 - 7) . "<br>";
+echo "Seda arv /2: " . (14 / 2) . "<br>";
+echo "Seda arv * 6: " . (7 * 6) . "<br>";
+$arv3 = 7*6;
+
+$hint = "Näpunäide: viimane arv3 = " . $arv3;
+
+echo '<button onclick="document.getElementById(\'nipp\').style.display=\'block\'">Näita nippi</button>';
+echo '<div id="nipp" style="display:none;">Õige vastus on arv3 = ' . $arv3 . '</div>';
