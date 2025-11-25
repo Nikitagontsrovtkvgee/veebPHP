@@ -75,7 +75,10 @@ $format = 'Tere, %s %s, arv x: %d';
 printf($format, $perenimi, $nimi, $x);
 echo "<br>";
 
-echo "<h3>Mõeldud arv</h3>";
+
+
+
+echo "<h3>Esimene Mõeldud arv</h3>";
 $arv3 = 42;
 
 echo "Mõeldud arv * 2: " . ($arv3 * 2) . "<br>";
@@ -85,7 +88,24 @@ echo "Seda arv /2: " . (14 / 2) . "<br>";
 echo "Seda arv * 6: " . (7 * 6) . "<br>";
 $arv3 = 7*6;
 
-$hint = "Näpunäide: viimane arv3 = " . $arv3;
+$hint1 = "Näpunäide: viimane arv3 = " . $arv3;
 
-echo '<button onclick="document.getElementById(\'nipp\').style.display=\'block\'">Näita nippi</button>';
-echo '<div id="nipp" style="display:none;">Õige vastus on arv3 = ' . $arv3 . '</div>';
+echo '<button onclick="document.getElementById(\'hint1\').style.display=\'block\'">Näita nippi</button>';
+echo '<div id="hint1" style="display:none;">' . $hint1 . '</div>';
+
+
+
+echo "<h3>Teine Mõeldud arv</h3>";
+$arv4 = 322;
+
+echo "Mõeldud arv / 8: " . ($arv4 / 8) . "<br>";
+echo "Seda arv * 4: " . (40.25 * 4) . "<br>";
+echo "Sellest arv - (22+81): " . (161 - (22+81)) . "<br>";
+echo "Selle arv +52: " . (58 + 52) . "<br>";
+echo "Seda arv * 3 - 8: " . (110 * 3 - 8) . "<br>";
+$arv4 = 40.25*8;
+
+$hint2 = "Näpunäide: viimane arv4 = " . $arv4;
+
+echo '<button onclick="document.getElementById(\'hint2\').style.display=\'block\'">Näita nippi</button>';
+echo '<div id="hint2" style="display:none;">' . $hint2 . '</div>';
