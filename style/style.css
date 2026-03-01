@@ -107,3 +107,12 @@ img {
     width: 100%;
     text-align: left;
 }
+
+.pilt-ring {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #333;
+    margin: 10px;
+    object-fit: cover;
+}
