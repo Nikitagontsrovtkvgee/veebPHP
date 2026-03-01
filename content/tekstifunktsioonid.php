@@ -26,7 +26,7 @@ $otsi = array('PHP', 'serveripoolne');
 $asendav = array('JavaScript', 'kliendipoolne');
 echo "Teksti täielik asendus: " . str_replace($otsi, $asendav, $tekst) . "<br>";
 
-// Твои пункты списка из оригинала
+
 echo "<ol>";
 echo "<li>" . $tekst[0] . "</li>";
 echo "<li>" . $tekst[1] . "</li>";
@@ -34,7 +34,7 @@ echo "<li>" . $tekst[2] . "</li>";
 echo "<li>" . $tekst[3] . "</li>";
 echo "</ol>";
 
-// ОБЯЗАТЕЛЬНАЯ ЗАГАДКА (Пункт 3 задания)
+
 echo "<h2>MÕISTATUS – ARVA ÄRA EESTI LINNANIMI</h2>";
 $linn = "Võru"; 
 echo "<ul>";
