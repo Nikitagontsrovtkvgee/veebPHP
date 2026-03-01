@@ -67,10 +67,9 @@ echo "<li>" . $tekst[3] . "</li>";
 echo "</ol>";
 
 echo "<h2>MÕISTATUS – ARVA ÄRA EESTI LINNANIMI</h2>";
-$linn = "Pärnu"; // ЗАМЕНИ ЗДЕСЬ: Напиши город из 5 букв (Pärnu, Paide и т.д.)
+$linn = "Pärnu";
 
 echo "<ol>";
-// strlen($linn) сам выведет "5", если в переменной $linn будет "Pärnu"
 echo "<li>Linnas on ".strlen($linn)." tähte</li>"; 
 echo "<li>Linn algab ".substr($linn, 0,1)." tähega</li>";
 echo "<li>Segatult tähed: ".str_shuffle($linn)."</li>";
@@ -85,8 +84,6 @@ echo "</ol>";
 
 <?php
 if (isset($_POST["linn"])) {
-    // strtolower делает обе строки маленькими, чтобы проверка прошла, 
-    // даже если пользователь напишет "pärnu" с маленькой буквы.
     if (strtolower($_POST["linn"]) == strtolower($linn)) {
         echo "<strong>" . $_POST["linn"] . " on õige!</strong>";
     } else {
