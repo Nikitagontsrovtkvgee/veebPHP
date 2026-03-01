@@ -1,9 +1,10 @@
 <h2>Pildigalerii</h2>
-<div class="gallery">
+<div class="galerii-container">
     <?php
-    $pildid = array("pilt1.jpg", "pilt2.jpg", "pilt3.jpg"); // Имена файлов из папки images/
+    // Предположим, у тебя в папке image/ лежат файлы pilt.png
+    $pildid = array("pilt.png", "pilt.png", "pilt.png"); 
     foreach($pildid as $pilt) {
-        echo "<img src='images/$pilt' class='gallery-img' alt='Galerii pilt'>";
+        echo "<img src='image/$pilt' class='galerii-pilt' alt='pilt'>";
     }
     ?>
 </div>
