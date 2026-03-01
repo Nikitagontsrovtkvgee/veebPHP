@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="style/style.css">
 <h2>Pildigalerii</h2>
 <div class="galerii">
     <?php
