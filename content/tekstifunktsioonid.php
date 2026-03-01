@@ -1,16 +1,4 @@
 <?php
-function clearVarsExcept($url, $varname){
-    $url = basename($url);
-
-    $value = $_REQUEST[$varname] ?? "";
-
-    if (str_starts_with($url, "?")) {
-        return "?varname=" . $_REQUEST[$varname];
-    }
-
-    return strtok($url, "?") . "?" . $varname . "=" . ($_REQUEST[$varname] ?? "");
-}
-
 echo "<h2>Tekstifunktsioonid</h2>";
 
 $tekst = 'PHP on skriptikeel serveripoolne';
@@ -50,54 +38,43 @@ echo "<br>";
 echo "5. täht massiivist – " . $tekst[4];
 echo "<br>";
 
-print_r(str_word_count($tekst, 1));
 $syna = str_word_count($tekst, 1);
-echo "<br>";
 echo "massiivist 3. sõna – " . $syna[2];
-echo "<br>";
-
-print_r(str_word_count($tekst, 2));
 echo "<br>";
 
 echo "<h2>Teksti asendamine - replace</h2>";
 $asendus = 'Javascript';
-
 echo "Esimesed 3 tähte asendatud: " . substr_replace($tekst, $asendus, 0, 3);
 echo "<br>";
 
-//
-// ВАЖНО: substr_replace не используется для массивов! → заменено на str_replace
-//
 $otsi = array('PHP', 'serveripoolne');
 $asendav = array('JavaScript', 'kliendipoolne');
-
 echo "Teksti täielik asendus: " . str_replace($otsi, $asendav, $tekst);
 echo "<br>";
 
+// МÕISTATUS
+echo "<h2>MÕISTATUS – ARVA ÄRA EESTI LINNANIMI</h2>";
+$linn = "Pärnu";
 echo "<ol>";
-echo "<li>" . $tekst[0] . "</li>";
-echo "<li>" . $tekst[1] . "</li>";
-echo "<li>" . $tekst[2] . "</li>";
-echo "<li>" . $tekst[3] . "</li>";
+echo "<li>Linn algab " . substr($linn, 0, 1) . " tähega</li>";
+echo "<li>Linnas on " . strlen($linn) . " tähte</li>";
+echo "<li>Linn lõpeb " . substr($linn, -1) . " tähega</li>";
+echo "<li>Segatud tähed: " . str_shuffle($linn) . "</li>";
 echo "</ol>";
 ?>
 
-<!-- ФОРМА -->
-<form name="testkontroll"
-      action="<?= clearVarsExcept($_SERVER['REQUEST_URI'], "link") ?>"
-      method="post">
+<form method="post">
     <label for="linn">Sisesta linnanimi:</label>
     <input type="text" id="linn" name="linn">
     <input type="submit" value="Kontrolli">
 </form>
 
 <?php
-// ОБРАБОТКА ФОРМЫ
 if (isset($_POST["linn"])) {
-    if ($_POST["linn"] == "Võru") {
-        echo $_POST["linn"] . " on õige";
+    if (strtolower($_POST["linn"]) == strtolower($linn)) {
+        echo "<strong>" . $_POST["linn"] . " on õige!</strong>";
     } else {
-        echo $_POST["linn"] . " on vale!";
+        echo "<strong>" . $_POST["linn"] . " on vale!</strong>";
     }
 }
 ?>
