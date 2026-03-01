@@ -11,70 +11,32 @@ echo "- Lahutamine: ".($arv1 - $arv2);
 echo "<br>";
 echo "* Korrutise tulemus: ".($arv1 * $arv2);
 echo "<br>";
-echo "/ Korrutise tulemus: ".($arv1/$arv2);
-echo "<br>";
-echo "<h3>Matemaatilesed funktsioonid</h3>";
-echo "Väiksem arv: ";
-echo min($arv1, $arv2);
-echo "<br>";
-echo "Suurem arv: ";
-echo max($arv1, $arv2);
-echo "<br>";
-echo "round(arv) - Ümardamine täisarvani: ";
-echo round($arv1);
-echo "<br>";
-echo "ceil(arv) - Ümardab jargmise arvuni: ";
-echo ceil($arv1);
-echo "<br>";
-echo "floor(arv) - Ümardab allapoole täisarvani: ";
-echo floor($arv1);
-echo "round(arv, 1) - Ümardab ühe komma kohtani";
-echo round($arv1, 1);
+echo "/ Jagamine: ".($arv1/$arv2);
 echo "<br>";
 
-echo rand(1, 100);
-echo "Juhuslik arv";
-echo "<br>";
-echo "pow(arv,2) - asendamine";
-echo pow($arv1, 2);
-echo "<br>";
-echo "sqrt - ruutjuur";
-echo sqrt($arv2);
-echo "<br>";
-echo pi();
-echo "<br>";
+echo "<h3>Matemaatilesed funktsioonid</h3>";
+echo "Väiksem arv: " . min($arv1, $arv2) . "<br>";
+echo "Suurem arv: " . max($arv1, $arv2) . "<br>";
+echo "round(arv) - Ümardamine: " . round($arv1) . "<br>";
+echo "ceil(arv) - Üles: " . ceil($arv1) . "<br>";
+echo "floor(arv) - Alla: " . floor($arv1) . "<br>";
+echo "Juhuslik arv: " . rand(1, 100) . "<br>";
+echo "pow(arv,2) - Ruut: " . pow($arv1, 2) . "<br>";
+echo "sqrt - Ruutjuur: " . sqrt($arv2) . "<br>";
 
 echo "<h2>Omistamine operaatorid</h2>";
-$x = 10;
-$y = 20;
-
+$x = 10; $y = 20;
 echo "Suurendamine ühe võrra: ";
-$x ++; //$x = $x+1
-echo "<br>";
-echo $x;
-echo "<br>";
-
-echo "Vahendamine ühe võrra: ";
-$x --;
-echo "<br>";
-echo $x;
-$x*=$y;// x= x*y
-echo $x;
-echo "<br>";
-
-$x /= $y;
-echo $x;
-echo "<br>";
+$x ++; echo $x . "<br>";
+$x*=$y; echo "Korrutisega omistamine: " . $x . "<br>";
 
 $nimi = "Nikita";
 $perenimi = "Gontsarov";
-//$nimi .=$perenimi;
-echo $nimi;
-echo "<br>";
 $format = 'Tere, %s %s, arv x: %d';
-printf($format, $perenimi, $nimi);
+printf($format, $perenimi, $nimi, $x);
 echo "<br>";
 
 echo "<h3>Mõeldud arv</h3>";
 $arv3 = 42;
-$arv3
+echo "Minu mõeldud arv on: " . $arv3;
+?>
